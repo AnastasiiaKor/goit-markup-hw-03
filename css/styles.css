@@ -43,6 +43,11 @@ ul {
   margin: 0 auto;
 }
 
+.section {
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
+
 .list {
   list-style: none;
 }
@@ -206,7 +211,6 @@ header {
 .sorter {
   margin-left: auto;
   margin-right: auto;
-  margin-top: 94px;
   margin-bottom: 34px;
   padding-left: 0;
   display: flex;
@@ -220,11 +224,17 @@ header {
   font-size: 16px;
   line-height: 1.63;
   letter-spacing: inherit;
-
+  background: #f5f4fa;
   padding: 6px 22px;
   height: 38px;
   border-radius: 4px;
   text-align: center;
+  border: none;
+}
+.sorter .button:hover {
+  background: var(--accent-color);
+  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+    0px 2px 2px rgba(0, 0, 0, 0.12);
 }
 .work-example .subtitle {
   font-size: 18px;
@@ -233,6 +243,36 @@ header {
 .work-example .text {
   font-size: 16px;
   line-height: 1.88;
+}
+
+.work-example {
+  width: 1170px;
+  padding-left: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  flex-basis: calc((100%-2 * 30) / 3);
+}
+.example-item {
+  width: 370px;
+  height: 404px;
+  border: 1px solid #eeeeee;
+}
+
+.work-example .subtitle {
+  height: 36px;
+  width: 322px;
+  margin-top: 20px;
+  margin-bottom: 4px;
+  margin-left: 24px;
+  margin-right: 24px;
+}
+.work-example .text {
+  height: 30px;
+  width: 322px;
+  margin-bottom: 20px;
+  margin-left: 24px;
+  margin-right: 24px;
 }
 /* footer styles */
 .footer {
