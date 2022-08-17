@@ -18,11 +18,7 @@
 html {
   box-sizing: border-box;
 }
-*,
-*::after,
-*::before {
-  box-sizing: inherit;
-}
+
 body {
   background-color: var(--main-background-color);
   color: var(--main-color);
@@ -58,30 +54,35 @@ ul {
 
 /* header styles */
 
-header .container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  height: 80px;
+.page-header {
+  background-color: #ffffff;
+  border-bottom: 1px solid #ececec;
 }
-
+.page-header .container {
+  display: flex;
+  padding-top: 25px;
+  padding-bottom: 25px;
+}
 .header-nav {
   display: flex;
+  align-items: center;
+}
+.header-nav .logo {
+  margin-right: 93px;
 }
 .site-nav {
   display: flex;
-  align-items: center;
 }
-
+.site-nav .item:not(:last-child),
+.contacts-nav .item:not(:last-child) {
+  margin-right: 50px;
+}
 .contacts-nav {
   display: flex;
   align-items: center;
+  margin-left: auto;
 }
 
-header {
-  background-color: #ffffff;
-  border: 1px solid #ececec;
-}
 .logo {
   color: #000;
 }
@@ -172,7 +173,6 @@ header {
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 
   min-width: 216px;
-  height: 50px;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   border-radius: 4px;
   padding: 10px 32px;
@@ -280,8 +280,7 @@ header {
   margin-bottom: 34px;
   padding-left: 0;
   display: flex;
-  justify-content: space-between;
-  width: 575px;
+  justify-content: center;
 }
 .sorter .button {
   font-family: inherit;
@@ -291,10 +290,12 @@ header {
   letter-spacing: inherit;
   background: #f5f4fa;
   padding: 6px 22px;
-  height: 38px;
   border-radius: 4px;
   text-align: center;
   border: none;
+}
+.sorter .item:not(:last-child) {
+  margin-right: 8px;
 }
 
 .work-example .subtitle {
@@ -334,11 +335,25 @@ header {
   border-right: 1px solid #eeeeee;
 }
 /* footer styles */
-.footer {
+.page-footer {
   background-color: var(--footer-backgroung-color);
+}
+.page-footer .container {
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+.page-footer .logo {
+  display: inline-block;
+  margin-bottom: 20px;
 }
 .logo-end {
   color: var(--main-background-color);
+}
+.link.map {
+  display: inline-block;
+}
+.address-nav .item:not(:last-child) {
+  margin-bottom: 9px;
 }
 .link .map {
   color: var(--main-background-color);
@@ -346,6 +361,7 @@ header {
 .address-nav > .list {
   font-style: normal;
 }
+
 .map {
   color: var(--main-background-color);
 }
